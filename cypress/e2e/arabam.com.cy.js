@@ -2,10 +2,9 @@ import { slowCypressDown } from "cypress-slow-down";
 import homePage from "../pages/homePage";
 
 
-slowCypressDown(false)
+slowCypressDown(true)
 describe('Login olmadan arabam.com gider ve satin almak istedigi arac özelliklerini filtreleyerek arama yapar', () => {
   beforeEach(() => {
-   cy.wait(1000)
    cy.on('uncaught:exception', (err, runnable) => false)
    
    cy.step('arabam.com sitesine gider')
